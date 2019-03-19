@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require "fileutils"
+
+require_relative "../lib/generate"
+
+export_dir = File.join(__dir__, "../build")
+
+FileUtils.rm_rf(export_dir, secure: true)
+FileUtils.mkdir_p(export_dir)
+
+Generate.new.call

@@ -1,0 +1,7 @@
+h1 My personal thoughts
+
+- notes.each do |note|
+  h2
+    a href="#{note.slug}"
+      = note.title
+  small= note.published_date
