@@ -1,14 +1,8 @@
-require "dry/view"
-require "slim"
-
-require_relative "../view/parts/note"
+require_relative "./site"
 
 module Views
- class Note < Dry::View
-    config.paths = [File.join(__dir__, "../templates")]
-    config.layout = "application"
+  class Note < Site
     config.template = "notes/show"
-    config.part_namespace = View::Parts
 
     attr_reader :note
 

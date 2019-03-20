@@ -39,7 +39,7 @@ PLATFORMS
 DEPENDENCIES
   commonmarker
   dry-view
-  front_matter_parser (~> 0.1, >= 0.1.1)
+  front_matter_parser
   pry
   slim
 

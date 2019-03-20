@@ -1,4 +1,4 @@
-require_relative 'loader'
+require_relative './importers/files'
 require_relative 'mappers/header'
 require_relative 'exporters/files'
 require_relative 'views/notes'
@@ -11,7 +11,7 @@ class Generate
   EXPORT_DIR = File.join(__dir__, "../build").freeze
 
   def initialize
-    @loader = Loader.new
+    @loader = Importers::Files.new
     @extract_header = Mappers::Header.new
     @render = Exporters::Files.new
   end
